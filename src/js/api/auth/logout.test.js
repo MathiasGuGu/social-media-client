@@ -15,7 +15,7 @@ import { logout } from "./logout";
 
 describe("logout", () => {
   it("removes the access token ", () => {
-    localStorage.setItem("token", "yourAccessToken");
+    localStorage.setItem("token", "dummyToken");
 
     logout();
 
