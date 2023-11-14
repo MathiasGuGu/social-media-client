@@ -16,15 +16,14 @@
     "lint": "eslint . --cache --fix",
     "lint-fix": "eslint src/**/*.js --cache --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.html": [
-      "prettier --write"
-    ],
-    "*.scss": [
+      "eslint --fix",
       "prettier --write"
     ]
   },
@@ -33,6 +32,8 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "live-server": "^1.2.2",
     "sass": "^1.54.8"
   },
