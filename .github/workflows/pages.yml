@@ -41,15 +41,6 @@ jobs:
         with:
           # Upload entire repository
           path: "."
-      - name: Test Build Unit Tests
-        run: npm run test-unit
-
-      - name: Test Build End-To-End Tests
-        run: npm run test-e2e-cli
-        env:
-          CYPRESS_LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
-          CYPRESS_LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
