@@ -9,20 +9,21 @@ global.localStorage = storageFix;
 
 describe("login", () => {
   it("Should retrieve login token", async () => {
-    const userName = "matgum51873@stud.noroff.no";
+    const username = "matgum51873@stud.noroff.no";
     const password = "aaiiuues";
 
-    const data = await login(userName, password);
+    const data = await login(username, password);
 
     expect(typeof data).toBe("object");
   });
 
   it("place token in local storage", async () => {
     localStorage.setItem("token", "dummyToken");
-    const userName = "matgum51873@stud.noroff.no";
+    const username = "matgum51873@stud.noroff.no";
     const password = "aaiiuues";
 
-    await login(userName, password);
+    // fetch not available
+    await login(username, password);
 
     const accessToken = localStorage.getItem("token");
     expect(accessToken).not.toBeNull();
