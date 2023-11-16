@@ -14,7 +14,7 @@ global.localStorage = {
 import { logout } from "./logout";
 
 describe("logout", () => {
-  it("removes the access token ", () => {
+  it("removes the access token", () => {
     localStorage.setItem("token", "dummyToken");
 
     logout();

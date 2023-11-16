@@ -19,8 +19,8 @@ describe("login", () => {
 
   it("place token in local storage", async () => {
     localStorage.setItem("token", "dummyToken");
-    const userName = "tulling@stud.noroff.no";
-    const password = "tulling1234";
+    const userName = "matgum51873@stud.noroff.no";
+    const password = "aaiiuues";
 
     await login(userName, password);
 
