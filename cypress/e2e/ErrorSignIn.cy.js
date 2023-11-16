@@ -5,8 +5,8 @@ describe("Authentication Tests", () => {
     cy.get("#registerForm > div.modal-footer > button.btn.btn-outline-success")
       .click()
       .wait(1000);
-    cy.get("#loginEmail").type("matgum51873@stud.noroff.no");
-    cy.get("#loginPassword").type("aaiiuues");
+    cy.get("#loginEmail").type("wrongmatgum51873@stud.noroff.no");
+    cy.get("#loginPassword").type("wrongaaiiuues");
     cy.get(".btn-success").contains("Login").click();
   });
 });
